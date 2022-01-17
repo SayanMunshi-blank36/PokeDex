@@ -1,0 +1,341 @@
+.poke_details_modal {
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+}
+
+.poke_details_card {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.modal_non_visible {
+  /* opacity: 0; */
+  /* visibility: hidden; */
+  transition: all 0.3s linear;
+}
+
+.modal_visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main_modal {
+  max-width: 64rem;
+  max-height: 80%;
+  background-color: rgba(0, 0, 0, 0.658);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  position: relative;
+}
+
+.poke_img_original {
+  width: 20rem;
+}
+
+.other_details_section {
+  /* background-color: red; */
+  width: 65%;
+  height: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bangers", cursive;
+}
+
+.poke_details_name {
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  margin: 0.25rem 0rem;
+  color: rgba(235, 116, 37);
+}
+
+.poke_details_type {
+  margin: 0.25rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.detail_type {
+  margin: 0 1rem;
+  padding: 0.25rem 1.2rem;
+  border-radius: 0.4rem;
+}
+
+.type-1 {
+  background-color: red;
+}
+
+.type-2 {
+  background-color: violet;
+}
+
+.poke_details_physic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.height,
+.weight,
+.ability {
+  margin: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.height_text,
+.weight_text,
+.ability_head {
+  font-size: 1.5rem;
+}
+
+.height_val,
+.weight_val,
+.ability_val {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.25rem;
+  border-radius: 0.2rem;
+}
+
+.ability {
+  margin-top: 1rem;
+}
+
+.poke_stats {
+  margin-top: 2rem;
+}
+
+.stats_head {
+  font-size: 2rem;
+  color: grey;
+  word-spacing: 0.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sub_stat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sub_stat_right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1rem;
+}
+
+.stat_bar {
+  width: 6rem;
+  height: 0.1rem;
+  background-color: white;
+  margin-left: 1rem;
+}
+
+.stat_bar_filled {
+  background-color: red;
+  /* width: 5rem; */
+  height: 0.1rem;
+}
+
+.close_modal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.75s linear;
+}
+
+.close_modal:hover {
+  transform: rotate(360deg);
+}
+
+.details_id {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  font-size: 2rem;
+  font-family: "Bangers", cursive;
+}
+
+.hidden {
+  display: none;
+}
+
+.normal {
+  background: #babaae;
+}
+
+.fighting {
+  background: #a75543;
+}
+
+.flying {
+  background: #78a2ff;
+}
+
+.poison {
+  background: #a95ca0;
+}
+
+.ground {
+  background: #eecc55;
+}
+
+.rock {
+  background: #ccbd72;
+}
+
+.bug {
+  background: #c2d21e;
+}
+
+.ghost {
+  background: #7975d7;
+}
+
+.steel {
+  background: #c4c2db;
+}
+
+.fire {
+  background: #fa5643;
+}
+
+.water {
+  background: #56adff;
+}
+
+.grass {
+  background: #8cd750;
+}
+
+.electric {
+  background: #fde139;
+}
+
+.psychic {
+  background: #fa65b4;
+}
+
+.ice {
+  background: #96f1ff;
+}
+
+.dragon {
+  background: #8673ff;
+}
+
+.dark {
+  background: #8d6855;
+}
+
+.fairy {
+  background: #f9aeff;
+}
+
+/* colors */
+
+.normal_color {
+  color: #babaae;
+}
+
+.fighting_color {
+  color: #a75543;
+}
+
+.flying_color {
+  color: #78a2ff;
+}
+
+.poison_color {
+  color: #a95ca0;
+}
+
+.ground_color {
+  color: #eecc55;
+}
+
+.rock_color {
+  color: #ccbd72;
+}
+
+.bug_color {
+  color: #c2d21e;
+}
+
+.ghost_color {
+  color: #7975d7;
+}
+
+.steel_color {
+  color: #c4c2db;
+}
+
+.fire_color {
+  color: #fa5643;
+}
+
+.water_color {
+  color: #56adff;
+}
+
+.grass_color {
+  color: #8cd750;
+}
+
+.electric_color {
+  color: #fde139;
+}
+
+.psychic_color {
+  color: #fa65b4;
+}
+
+.ice_color {
+  color: #96f1ff;
+}
+
+.dragon_color {
+  color: #8673ff;
+}
+
+.dark_color {
+  color: #8d6855;
+}
+
+.fairy_color {
+  color: #f9aeff;
+}
+
+.poke_card {
+  z-index: 999;
+}
+
+@media (max-width: 360px) {
+  * {
+    font-size: 6px;
+  }
+
+  .poke_img_original {
+    width: 15rem;
+  }
+}

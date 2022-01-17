@@ -1,13 +1,59 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Press+Start+2P&display=swap");
+
+/* font-family: 'Bangers', cursive;
+font-family: 'Press Start 2P', cursive; */
+
+::-webkit-scrollbar {
+  display: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(0, 0, 0, 0.7) url(./images/main_bg.jpg);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: repeat;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+@media (max-width: 872px) {
+  * {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 520px) {
+  * {
+    font-size: 12px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .main_section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  }
+  img {
+    width: 120%;
+  }
+}
+
+@media (max-width: 300px) {
+  * {
+    font-size: 10px;
+  }
+  img {
+    width: 100%;
+  }
 }

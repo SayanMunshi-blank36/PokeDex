@@ -1,0 +1,68 @@
+:root {
+  --btn-color: rgb(196, 156, 236);
+  --btn-hover-color: rgb(128, 52, 204);
+}
+
+.container {
+  margin: 0 2rem;
+  margin-top: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_bar {
+  /* height: 2rem; */
+  outline: none;
+  font-size: 0.5rem;
+  padding: 0.75rem;
+  border: 2px solid black;
+  font-family: "Press Start 2P", cursive;
+}
+
+.name_search_box {
+  width: 50rem;
+  margin-right: 1rem;
+}
+
+.id_search_box {
+  width: 10rem;
+  margin-left: 1rem;
+}
+
+.search_btn {
+  margin-left: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.7rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: var(--btn-color);
+  color: #000;
+  border: 2px solid black;
+  transition: all 0.2s linear;
+  font-family: "Press Start 2P", cursive;
+}
+
+.search_btn:hover {
+  transform: scale(0.9);
+  background-color: var(--btn-hover-color);
+}
+
+@media (max-width: 800px) {
+  * {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 330px) {
+  * {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 260px) {
+  * {
+    font-size: 6px;
+  }
+}

@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Press+Start+2P&display=swap");
+
+.each_poke_card {
+  position: relative;
+  background-color: #f2684a;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1rem;
+  padding: 0 1.2rem;
+  border: 2px solid black;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.1s linear;
+  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 0.75rem;
+  z-index: 100;
+}
+
+.id_no {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.4rem;
+  font-family: "Bangers", cursive;
+  font-size: 0.75rem;
+}
+
+.each_poke_card:hover {
+  transform: translateY(-0.5rem);
+  z-index: -1;
+}
+
+.name_and_type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bangers", cursive;
+  z-index: -1;
+}
+
+.poke_name {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  z-index: -1;
+}
+
+.type {
+  font-size: 0.6rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  z-index: -1;
+}
+
+.t-1 {
+  margin-bottom: 0.15rem;
+}
+
+.t-2 {
+  margin-top: 0.15rem;
+}
+
+.img_container {
+  width: 5rem;
+  z-index: -1;
+}
+
+.hide {
+  display: none;
+}
+
+.normal {
+  background: #babaae;
+}
+
+.fighting {
+  background: #a75543;
+}
+
+.flying {
+  background: #78a2ff;
+}
+
+.poison {
+  background: #a95ca0;
+}
+
+.ground {
+  background: #eecc55;
+}
+
+.rock {
+  background: #ccbd72;
+}
+
+.bug {
+  background: #c2d21e;
+}
+
+.ghost {
+  background: #7975d7;
+}
+
+.steel {
+  background: #c4c2db;
+}
+
+.fire {
+  background: #fa5643;
+}
+
+.water {
+  background: #56adff;
+}
+
+.grass {
+  background: #8cd750;
+}
+
+.electric {
+  background: #fde139;
+}
+
+.psychic {
+  background: #fa65b4;
+}
+
+.ice {
+  background: #96f1ff;
+}
+
+.dragon {
+  background: #8673ff;
+}
+
+.dark {
+  background: #8d6855;
+}
+
+.fairy {
+  background: #f9aeff;
+}
+
+.poke_card {
+  z-index: 999;
+}
