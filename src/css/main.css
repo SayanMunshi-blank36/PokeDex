@@ -51,8 +51,8 @@
 
 @media (max-width: 450px) {
   .main_section {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
   }
   img {
     width: 120%;

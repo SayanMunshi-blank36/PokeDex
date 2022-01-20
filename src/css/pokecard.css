@@ -148,3 +148,10 @@
 .poke_card {
   z-index: 999;
 }
+
+@media (max-width: 450px) {
+  .each_poke_card {
+    flex-direction: column-reverse;
+    height: 10rem;
+  }
+}
