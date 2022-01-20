@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../css/main.css";
 import "../css/media_queries.css";
+import Loader from "./Loader";
 import PokeCards from "./PokeCards";
 
 const Main = () => {
@@ -8,7 +9,10 @@ const Main = () => {
 
   const [pokeData, setPokeData] = useState([]);
 
+  const [loading, setLoading] = useState(false);
+
   const pokeApiCall = async () => {
+    setLoading(true);
     const res = await fetch(
       `https://pokeapi.co/api/v2/pokemon?offset=${offSet}&limit=20`
     );
@@ -28,6 +32,7 @@ const Main = () => {
 
     setPokeData(await Promise.all(exactPokeData));
     // console.log(await Promise.all(exactPokeData));
+    setLoading(false);
   };
 
   const handlePrevClick = () => {
@@ -45,19 +50,23 @@ const Main = () => {
   return (
     <>
       <div className="main_section">
-        {pokeData.map((elem, idx) => {
-          return (
-            <PokeCards
-              key={idx}
-              id={elem.id}
-              pokeName={elem.name}
-              type1={elem.types[0].type.name}
-              type2={elem.types.length === 1 ? "" : elem.types[1].type.name}
-              pokeImg={elem.sprites.front_default}
-              pokeData={pokeData}
-            />
-          );
-        })}
+        {loading ? (
+          <Loader />
+        ) : (
+          pokeData.map((elem, idx) => {
+            return (
+              <PokeCards
+                key={idx}
+                id={elem.id}
+                pokeName={elem.name}
+                type1={elem.types[0].type.name}
+                type2={elem.types.length === 1 ? "" : elem.types[1].type.name}
+                pokeImg={elem.sprites.front_default}
+                pokeData={pokeData}
+              />
+            );
+          })
+        )}
       </div>
       <div className="main_button_section">
         <button
