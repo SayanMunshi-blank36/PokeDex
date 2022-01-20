@@ -45,7 +45,9 @@ const Main = () => {
     setOffSet(newOffset);
   };
 
-  useEffect(pokeApiCall, [offSet]);
+  useEffect(() => {
+    pokeApiCall();
+  }, [offSet]);
 
   return (
     <>
