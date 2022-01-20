@@ -3,7 +3,15 @@ import "../css/pokecard.css";
 import PokeDetails from "./PokeDetails";
 import "../css/media_queries.css";
 
-const PokeCards = ({ id, pokeName, type1, type2, pokeImg, pokeData }) => {
+const PokeCards = ({
+  id,
+  pokeName,
+  type1,
+  type2,
+  pokeImg,
+  pokeData,
+  pokeSearchData,
+}) => {
   const [clickedId, setClickedId] = useState(0);
   const [clickedName, setClickedName] = useState("");
   const [clickedType1, setClickedType1] = useState("");
@@ -67,6 +75,7 @@ const PokeCards = ({ id, pokeName, type1, type2, pokeImg, pokeData }) => {
           pokeData={pokeData}
           view={view}
           setView={setView}
+          pokeSearchData={pokeSearchData}
         />
       )}
     </>

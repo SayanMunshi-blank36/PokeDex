@@ -10,6 +10,7 @@ const PokeDetails = ({
   pokeData,
   view,
   setView,
+  pokeSearchData,
 }) => {
   //   console.log(pokeData);
   const closeModal = () => {
@@ -84,27 +85,43 @@ const PokeDetails = ({
           <div className="poke_details_physic">
             <div className="height">
               <p className="height_text">Height</p>
-              <p className="height_val">{height * 10} cm</p>
+              <p className="height_val">
+                {height === "" ? pokeSearchData.height * 10 : height * 10} cm
+              </p>
             </div>
             <div className="weight">
               <p className="weight_text">Weight</p>
-              <p className="weight_val">{weight / 10} kg</p>
+              <p className="weight_val">
+                {weight === "" ? pokeSearchData.weight / 10 : weight / 10} kg
+              </p>
             </div>
           </div>
           <div className="ability">
             <p className="ability_head">Ability</p>
-            <p className="ability_val">{ability}</p>
+            <p className="ability_val">
+              {ability === ""
+                ? pokeSearchData.abilities[0].ability.name
+                : ability}
+            </p>
           </div>
           <div className="poke_stats">
             <p className="stats_head">Base Stats</p>
             <div className="sub_stat hp">
               <p className="sub_stat_head">HP :</p>
               <div className="sub_stat_right">
-                <p className="sub_stat_val">{hp}</p>
+                <p className="sub_stat_val">
+                  {hp === "" ? pokeSearchData.stats[0].base_stat : hp}
+                </p>
                 <div className="stat_bar">
                   <div
                     className="stat_bar_filled"
-                    style={{ width: `${(hp / 255) * 6}rem` }}
+                    style={{
+                      width: `${
+                        ((hp === "" ? pokeSearchData.stats[0].base_stat : hp) /
+                          255) *
+                        6
+                      }rem`,
+                    }}
                   ></div>
                 </div>
               </div>
@@ -112,11 +129,21 @@ const PokeDetails = ({
             <div className="sub_stat attack">
               <p className="sub_stat_head">ATTACK :</p>
               <div className="sub_stat_right">
-                <p className="sub_stat_val">{attack}</p>
+                <p className="sub_stat_val">
+                  {attack === "" ? pokeSearchData.stats[1].base_stat : attack}
+                </p>
                 <div className="stat_bar">
                   <div
                     className="stat_bar_filled"
-                    style={{ width: `${(attack / 255) * 6}rem` }}
+                    style={{
+                      width: `${
+                        ((attack === ""
+                          ? pokeSearchData.stats[1].base_stat
+                          : attack) /
+                          255) *
+                        6
+                      }rem`,
+                    }}
                   ></div>
                 </div>
               </div>
@@ -124,11 +151,21 @@ const PokeDetails = ({
             <div className="sub_stat defence">
               <p className="sub_stat_head">DEFENCE :</p>
               <div className="sub_stat_right">
-                <p className="sub_stat_val">{defence}</p>
+                <p className="sub_stat_val">
+                  {defence === "" ? pokeSearchData.stats[2].base_stat : defence}
+                </p>
                 <div className="stat_bar">
                   <div
                     className="stat_bar_filled"
-                    style={{ width: `${(defence / 255) * 6}rem` }}
+                    style={{
+                      width: `${
+                        ((defence === ""
+                          ? pokeSearchData.stats[2].base_stat
+                          : defence) /
+                          255) *
+                        6
+                      }rem`,
+                    }}
                   ></div>
                 </div>
               </div>
@@ -136,11 +173,21 @@ const PokeDetails = ({
             <div className="sub_stat sp_atk">
               <p className="sub_stat_head">SP.ATK :</p>
               <div className="sub_stat_right">
-                <p className="sub_stat_val">{spAtk}</p>
+                <p className="sub_stat_val">
+                  {spAtk === "" ? pokeSearchData.stats[3].base_stat : spAtk}
+                </p>
                 <div className="stat_bar">
                   <div
                     className="stat_bar_filled"
-                    style={{ width: `${(spAtk / 255) * 6}rem` }}
+                    style={{
+                      width: `${
+                        ((spAtk === ""
+                          ? pokeSearchData.stats[3].base_stat
+                          : spAtk) /
+                          255) *
+                        6
+                      }rem`,
+                    }}
                   ></div>
                 </div>
               </div>
@@ -148,11 +195,21 @@ const PokeDetails = ({
             <div className="sub_stat sp_def">
               <p className="sub_stat_head">SP.DEF :</p>
               <div className="sub_stat_right">
-                <p className="sub_stat_val">{spDef}</p>
+                <p className="sub_stat_val">
+                  {spDef === "" ? pokeSearchData.stats[4].base_stat : spDef}
+                </p>
                 <div className="stat_bar">
                   <div
                     className="stat_bar_filled"
-                    style={{ width: `${(spDef / 255) * 6}rem` }}
+                    style={{
+                      width: `${
+                        ((spDef === ""
+                          ? pokeSearchData.stats[4].base_stat
+                          : spDef) /
+                          255) *
+                        6
+                      }rem`,
+                    }}
                   ></div>
                 </div>
               </div>
@@ -160,11 +217,21 @@ const PokeDetails = ({
             <div className="sub_stat speed">
               <p className="sub_stat_head">SPEED :</p>
               <div className="sub_stat_right">
-                <p className="sub_stat_val">{speed}</p>
+                <p className="sub_stat_val">
+                  {speed === "" ? pokeSearchData.stats[5].base_stat : speed}
+                </p>
                 <div className="stat_bar">
                   <div
                     className="stat_bar_filled"
-                    style={{ width: `${(speed / 255) * 6}rem` }}
+                    style={{
+                      width: `${
+                        ((speed === ""
+                          ? pokeSearchData.stats[5].base_stat
+                          : speed) /
+                          255) *
+                        6
+                      }rem`,
+                    }}
                   ></div>
                 </div>
               </div>
@@ -173,7 +240,14 @@ const PokeDetails = ({
             <div className="sub_stat total">
               <p className="sub_stat_head">TOTAL :</p>
               <p className="sub_stat_val">
-                {hp + attack + defence + spAtk + spDef + speed}
+                {(hp === "" ? pokeSearchData.stats[0].base_stat : hp) +
+                  (attack === "" ? pokeSearchData.stats[1].base_stat : attack) +
+                  (defence === ""
+                    ? pokeSearchData.stats[2].base_stat
+                    : defence) +
+                  (spAtk === "" ? pokeSearchData.stats[3].base_stat : spAtk) +
+                  (spDef === "" ? pokeSearchData.stats[4].base_stat : spDef) +
+                  (speed === "" ? pokeSearchData.stats[5].base_stat : speed)}
               </p>
             </div>
           </div>

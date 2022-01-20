@@ -3,13 +3,20 @@ import "./css/media_queries.css";
 import { Header } from "./components/Header";
 import Main from "./components/Main";
 import SearchBar from "./components/SearchBar";
+import { useState } from "react";
 
 function App() {
+  const [pokeSName, setPokeSName] = useState("");
+
+  const handleSearch = (pokeSearchName) => {
+    setPokeSName(pokeSearchName);
+  };
+
   return (
     <>
       <Header />
-      <SearchBar />
-      <Main />
+      <SearchBar handleSearch={handleSearch} />
+      <Main pokeSName={pokeSName} setPokeSName={setPokeSName} />
     </>
   );
 }
