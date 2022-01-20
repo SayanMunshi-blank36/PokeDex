@@ -47,7 +47,7 @@ const Main = () => {
 
   useEffect(() => {
     pokeApiCall();
-  }, [offSet]);
+  }, [offSet]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>
