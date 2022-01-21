@@ -20,7 +20,11 @@ const Main = ({ pokeSName, setPokeSName }) => {
     setLoading(true);
     try {
       const res = await fetch(
-        `https://pokeapi.co/api/v2/pokemon/${pokeSName.toLowerCase()}`
+        `https://pokeapi.co/api/v2/pokemon/${
+          pokeSName.toLowerCase() === "giratina"
+            ? "giratina-altered"
+            : pokeSName.toLowerCase()
+        }`
       );
 
       const data = await res.json();
