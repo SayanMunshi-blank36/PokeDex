@@ -17,6 +17,7 @@ const Main = ({ pokeSName, setPokeSName }) => {
   const [searchResult, setSearchResult] = useState(null);
 
   const searchCall = async (pokeSName) => {
+    setLoading(true);
     try {
       const res = await fetch(
         `https://pokeapi.co/api/v2/pokemon/${pokeSName.toLowerCase()}`
@@ -26,10 +27,12 @@ const Main = ({ pokeSName, setPokeSName }) => {
 
       console.log(data);
       setSearchResult(data);
+      setLoading(false);
     } catch (err) {
       // console.log(err);
       // alert("wrong Input");
       setSearchError("No Results Found");
+      setLoading(false);
     }
   };
 
