@@ -77,7 +77,6 @@ const Main = ({ pokeSName, setPokeSName }) => {
   const closeErrModal = (e) => {
     e.target.parentElement.parentElement.style.display = "none";
     setSearchError("");
-    window.location.reload();
   };
 
   useEffect(() => {
