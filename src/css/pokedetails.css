@@ -10,7 +10,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
   color: white;
 }
 
@@ -338,4 +338,76 @@
   .poke_img_original {
     width: 15rem;
   }
+}
+
+.normal_bg {
+  background: #babaae80;
+}
+
+.fighting_bg {
+  background: #a7554380;
+}
+
+.flying_bg {
+  background: #78a2ff80;
+}
+
+.poison_bg {
+  background: #a95ca080;
+}
+
+.ground_bg {
+  background: #eecc5580;
+}
+
+.rock_bg {
+  background: #ccbd7280;
+}
+
+.bug_bg {
+  background: #c2d21e80;
+}
+
+.ghost_bg {
+  background: #7975d780;
+}
+
+.steel_bg {
+  background: #c4c2db80;
+}
+
+.fire_bg {
+  background: #fa564380;
+}
+
+.water_bg {
+  background: #56adff80;
+}
+
+.grass_bg {
+  background: #8cd75080;
+}
+
+.electric_bg {
+  background: #fde13980;
+}
+
+.psychic_bg {
+  background: #fa65b480;
+}
+
+.ice_bg {
+  background: #96f1ff80;
+}
+
+.dragon_bg {
+  background: #8673ff80;
+}
+
+.dark_bg {
+  background: #8d685580;
+}
+
+.fairy_bg {
+  background: #f9aeff80;
 }

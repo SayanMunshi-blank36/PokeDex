@@ -45,7 +45,7 @@ const PokeDetails = ({
 
   return (
     <div
-      className="poke_details_modal modal_non_visible poke_details_card"
+      className={`poke_details_modal modal_non_visible poke_details_card ${clickedType1}_bg`}
       style={{
         opacity: `${!view ? "0" : "1"}`,
         visibility: `${!view ? "hidden" : "visible"}`,
